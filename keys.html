@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="key" class="divisor" style="background-color: white; border: 5px black solid; height: 200px; width: 200px;"></div>
+    <script>
+        // Variables de color
+        var a = 'rgb(255,192,203)';
+        var s = 'rgb(255,165,0)';
+        var d = 'rgb(0,170,228)';
+        var q = 'rgb(87,35,100)';
+        var w = 'rgb(155,155,155)';
+        var e = 'rgb(75,54,33)';
+
+        // Escuchar el evento keydown una sola vez
+        document.addEventListener('keydown', function (event) {
+            const key = document.getElementById('key');
+            if (event.key === 'a') {
+                key.style.backgroundColor = a; // Cambia el color a rosa
+            } else if (event.key === 's') {
+                key.style.backgroundColor = s; // Cambia el color a naranja
+            } else if (event.key === 'd') {
+                key.style.backgroundColor = d; // Cambia el color a azul claro
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            const content = document.createElement("div");
+            if (event.key === 'q') {
+            content.style.backgroundColor = q; // Cambia el color a rosa
+            } else if (event.key === 'w') {
+            content.style.backgroundColor = w; // Cambia el color a naranja
+            } else if (event.key === 'e') {
+            content.style.backgroundColor = e; // Cambia el color a azul claro
+        }
+
+    // Establecer ancho y alto para visibilidad
+        content.style.width = '200px';
+        content.style.height = '200px';
+        content.style.position = 'absolute';
+        content.style.left = '300px'
+        content.style.bottom = '518px'
+        content.style.border = 'black 5px solid';
+
+        // Agregar el nuevo div al body
+        document.body.appendChild(content);
+        });
+    </script>
+</body>
+</html>
